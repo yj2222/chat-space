@@ -1,5 +1,4 @@
 ## membersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -7,6 +6,33 @@
 
 ### Association
 - belongs_to :group
+- belongs_to :user
+
+## groupテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_name|integer|null: false, foreign_key: true|
+|members_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :members
+
+## userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false, foreign_key: true|
+|password|string|null: false, foreign_key: true|
+
+### Association
+- belongs_to :member
+
+## messageテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|text|text|null: false, foreign_key: true|
+
+### Association
 - belongs_to :user
 
 # README
