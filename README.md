@@ -11,12 +11,12 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: true|
 |members_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :members
-- has_many :users
+- has_many :users, through: :members
+- has_many :members 
 
 ## userテーブル
 |Column|Type|Options|
@@ -25,8 +25,8 @@
 |password|string|null: false, foreign_key: true|
 
 ### Association
+- has_many :groups, through: :members
 - belongs_to :member
-- has_many :groups
 
 ## messageテーブル
 |Column|Type|Options|
