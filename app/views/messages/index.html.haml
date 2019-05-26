@@ -1,0 +1,99 @@
+.flash-box
+  フラッシュメッセージ(ここはあとで隠すようにします)
+
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name
+        増島裕司
+        %ul.user-menu
+          %li.user-menu__edit-user
+            %a(href="グループの編集URL")
+              %i.fa.fa-edit
+          %li.user-menu__new-group
+            %a(href="新規グループ作成へのURL")
+              %i.fa.fa-cog
+    
+    .groups
+
+      %a(href="中央にグループのメッセージが表示される")
+        .group
+          %p.group__group-name
+            test1
+          %p.group__latest-message
+            まだメッセージがありません1
+      
+      /冗長化ここからーーーーーーーーーーーーーーーーーーーーーーーーーー
+      %a(href="中央にグループのメッセージが表示される")
+        .group
+          %p.group__group-name
+            test2
+          %p.group__latest-message
+            まだメッセージがありません2
+
+      %a(href="中央にグループのメッセージが表示される")
+        .group
+          %p.group__group-name
+            test3
+          %p.group__latest-message
+            まだメッセージがありません3
+      /冗長化ここまでーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+  .chat-main
+    .main-header
+      .current-group
+        %h2.current-group__name
+          グループ名
+          %ul.member-list
+            Member：
+            %li.member-list__member
+              test0001
+            %li.member-list__member
+              ユーザネーム
+      %a(href="グループの編集URL")
+        .main-header__edit-btn
+          Edit
+
+    .messages
+
+      .message
+        .upper-info
+          %p.upper-info__user
+            ユーザネーム1
+          %p.upper-info__date
+            yyyy/mm/dd(xxx) hh:mm:ss
+        %p.message__text
+          test message1
+
+      /冗長化ここからーーーーーーーーーーーーーーーーーーーーーーーーーー
+      .message
+        .upper-info
+          %p.upper-info__user
+            ユーザネーム2
+          %p.upper-info__date
+            yyyy/mm/dd(xxx) hh:mm:ss
+        %p.message__text
+          test message2
+          
+      .message
+        .upper-info
+          %p.upper-info__user
+            ユーザネーム3
+          %p.upper-info__date
+            yyyy/mm/dd(xxx) hh:mm:ss
+        %p.message__text
+          test message3
+      /冗長化ここまでーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+    .form
+      %form{:action => "formの送信先", :accept-charset => "UTF-8", :method => "post", :class => "new-message"}
+        .input-box
+          %input{:placeholder => "type a message", :class => "input-box__text", :type => "text", :name => "メッセージコンテンツ" }
+            %label{:class => "image-label", :for => "message_image"}
+              %i.fa.fa-image
+              %input{:class => "image-label__input", :type => "file", :name => "イメージコンテンツ", :id => "message_image" }
+        %input{:type => "submit", :name => "commit", :value => "Send", :class => "new-message__submit-btn"}
+
+
+
+
