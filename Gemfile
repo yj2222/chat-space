@@ -58,3 +58,5 @@ gem 'haml-rails'
 gem 'erb2haml'
 # アイコンが使えるgem
 gem 'font-awesome-rails'
+# login機能が使えるgem
+gem 'devise'

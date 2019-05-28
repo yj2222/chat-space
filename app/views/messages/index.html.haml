@@ -6,36 +6,20 @@
         = current_user.name
         %ul.user-menu
           %li.user-menu__edit-user
-            = link_to do
+            = link_to new_group_path do
               = fa_icon 'pencil-square-o', class: 'icon'
           %li.user-menu__new-group
             = link_to edit_user_path(current_user) do
               = fa_icon 'cog', class: 'icon'
     
     .groups
-
-      = link_to "中央にグループのメッセージが表示される" do
-        .group
-          %p.group__group-name
-            test1
-          %p.group__latest-message
-            まだメッセージがありません1
-      
-      /冗長化ここからーーーーーーーーーーーーーーーーーーーーーーーーーー
-      = link_to "中央にグループのメッセージが表示される" do
-        .group
-          %p.group__group-name
-            test2
-          %p.group__latest-message
-            まだメッセージがありません2
-
-      = link_to "中央にグループのメッセージが表示される" do
-        .group
-          %p.group__group-name
-            test3
-          %p.group__latest-message
-            まだメッセージがありません3
-      /冗長化ここまでーーーーーーーーーーーーーーーーーーーーーーーーーー
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .group
+            %p.group__group-name
+              = group.name
+            %p.group__latest-message
+              まだメッセージがありません1
 
   .chat-main
     .main-header
