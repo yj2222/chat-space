@@ -60,3 +60,10 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 # login機能が使えるgem
 gem 'devise'
+# Railsの画像管理  
+gem 'carrierwave'
+# Railsの画像管理？  
+gem 'mini_magick'
+# binding.pry 
+gem 'pry-rails'
+
