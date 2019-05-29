@@ -25,7 +25,7 @@
         test message1
   
   .form
-    = form_for " " do |f|
+    = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .form__mask
         = f.label :image, class: 'form__mask__image' do
