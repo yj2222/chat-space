@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
+    
   end
 
   def new
@@ -17,6 +18,10 @@ class GroupsController < ApplicationController
       render :new
     end
   end
+
+  # def edit 
+  #   @group = Group.new
+  # end
 
   def update
     if @group.update(group_params)
