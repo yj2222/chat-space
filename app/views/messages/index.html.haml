@@ -1,5 +1,10 @@
 .flash-box
 .wrapper
+  .side-bar
+    = render partial: "messages/side_bar"
+  .chat-main
+    = render partial: "messages/main_header"
 
-  = render partial: "messages/side_bar"
-  = render partial: "messages/main"
+    = render partial: 'main', collection: @messages  
+
+      

@@ -1,45 +1,23 @@
-.chat-main
-  .main-header
-    .current-group
-      %h2.current-group__name
-        グループ名
-        %ul.member-list
-          Member：
-          %li.member-list__member
-            test0001
-          %li.member-list__member
-            ユーザネーム
-    = link_to "グループの編集URL" do
-      .main-header__edit-btn
-        Edit
+.messages
+  .message
+    .upper-info
+      %p.upper-info__user
+        aaa
+        = message.user.name
+      %p.upper-info__date
+        aaa
+        -# = message.created_at.strftime("%Y/%m/%d %H:%M")
+    %p.message__text
+      aaa
+      -# - if message.content.present?
+      -#   = message.content
+      -# = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
-  .messages
-
-    .message
-      .upper-info
-        %p.upper-info__user
-          ユーザネーム1
-        %p.upper-info__date
-          yyyy/mm/dd(xxx) hh:mm:ss
-      %p.message__text
-        test message1
-  
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
-
-  -# .form
-  -#   %form{action: "formの送信先", accept:{charset: "UTF-8"}, method: "post", class: "new-message"}
-  -#     .input-box
-  -#       %input{placeholder: "type a message", class: "input-box__text", type: "text", name: "メッセージコンテンツ" }
-  -#         %label{class: "image-label", for: "message_image"}
-  -#           %i.fa.fa-image
-  -#           %input{class: "image-label__input", type: "file", name: "イメージコンテンツ", id: "message_image" }
-  -#     %input{type: "submit", name: "commit", value: "Send", class: "new-message__submit-btn"}
-
-  
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
