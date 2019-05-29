@@ -4,7 +4,7 @@
     = render partial: "messages/side_bar"
   .chat-main
     = render partial: "messages/main_header"
-
-    = render partial: 'main', collection: @messages  
+    .messages
+      = render partial: 'message', collection: @messages  
 
       
