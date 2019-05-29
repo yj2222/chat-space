@@ -6,9 +6,8 @@ $side_header_font: 20px;
 $side_blue_light: #2f3e51;
 $side_group_name: 15px;
 $side_group_message: 11px;
-// $white: #ddd;
-// $light_blue: #38aef0;
-
+$white: white;
+$light_blue: #38aef0;
 
 @mixin block-margin {
   display: block;
