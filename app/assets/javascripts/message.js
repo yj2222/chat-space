@@ -39,20 +39,11 @@ $(function(){
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.form__message').val('');
-      $(".form__submit").prop('disabled', false);
+      $('.form__submit').prop('disabled', false);
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('Please Type a Message!');
     })
   })
 });
-
-
-
-
-
-
-
-
-  
-  
