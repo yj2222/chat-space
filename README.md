@@ -44,12 +44,12 @@
 
 ## 使い方
 
-①新規登録
-テスト用アカウント：Email・・・test1@gmail.com
-               ：password・・・test1111
-上記を入力しloginボタンを押下してください。
+①新規登録<br>
+テスト用アカウント：Email・・・test1@gmail.com<br>
+               ：password・・・test1111<br>
+上記を入力しloginボタンを押下してください。<br>
 
-<img width="1395" alt="chat-space_sign-in" src="https://user-images.githubusercontent.com/50900728/61839197-a6b33c80-aec7-11e9-8571-70571333c75d.png">
+<img width="400" alt="chat-space_sign-in" src="https://user-images.githubusercontent.com/50900728/61839197-a6b33c80-aec7-11e9-8571-70571333c75d.png">
 
 ②メインページにてグループを選択
 
